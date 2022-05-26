@@ -12,6 +12,9 @@ Rank = [11,2,29,36,35,9,5,25,6,1,3,12,15,8,21,16,13,16,18,34,29,28,4,20,7,32,
         22,37,27,24,10,14,23,17,33,26,21,22]
 Weight = [228,172,190,165,258,106,196,204,240,190,260,122,130,206,180,196,180,182,191,
           246,108,385,198,226,256,200,210,186,196,92,198,122,182,208,213,110,124,158]
+Height = [185,180,175,178,203,165,185,188,196,178,191,168,178,188,175,180,178,180,183,
+          191,168,203,180,196,188,188,196,180,183,155,183,170,178,188,185,168,160,170]
+
 play=0
 c=0
 s=0
@@ -21,7 +24,7 @@ while(play<10):
     y = rd.choice(Name)
     print("Player 1 picked up " +x)
     print("Player 2 picked up " +y)
-    n = input("Choose either Popularity, Weight or Rank")
+    n = input("Choose either Popularity, Height, Weight or Rank")
     i=0
     for a in Name:
         if (a==x):
@@ -32,7 +35,7 @@ while(play<10):
         if (b==y):
             break
         j=j+1
-    if(n=="Popularity" or n==" Popularity" or n=="popularity" or n==" popularity"):
+    if(n=="Popularity" or n==" Popularity" or n=="popularity" or n==" popularity" or n=="p" or n=="P"):
         print("Popularity of " +Name[i]+ " is: " +str(Popularity[i]))
         print("Popularity of " +Name[j]+ " is: " +str(Popularity[j]))
         if(Popularity[i] > Popularity[j]):
@@ -43,7 +46,7 @@ while(play<10):
             c=c+1
         else:
             print("DRAWWWW!!!")
-    elif(n=="Rank" or n==" Rank" or n=="rank" or n==" rank"):
+    elif(n=="Rank" or n==" Rank" or n=="rank" or n==" rank" or n=="r" or n=="R"):
         print("Rank of " +Name[i]+ " is: " +str(Rank[i]))
         print("Rank of " +Name[j]+ " is: " +str(Rank[j]))
         if(Rank[i] > Rank[j]):
@@ -54,13 +57,24 @@ while(play<10):
             s=s+1
         else:
             print("DRAWWWW!!!")
-    elif(n=="Weight" or n==" Weight" or n=="weight" or n==" weight"):
+    elif(n=="Weight" or n==" Weight" or n=="weight" or n==" weight" or n=="w" or n=="W"):
         print("Weight of " +Name[i]+ " is: " +str(Weight[i]))
         print("Weight of " +Name[j]+ " is: " +str(Weight[j]))
         if(Weight[i] > Weight[j]):
             print(Name[i]+ " wins!")
             s=s+1
         elif(Weight[j] > Weight[i]):
+            print(Name[j]+ " wins!")
+            c=c+1
+        else:
+            print("DRAWWWW!!!")
+    elif(n=="Height" or n==" Height" or n=="height" or n==" height" or n=="h" or n=="H"):
+        print("Height of " +Name[i]+ " is: " +str(Height[i]))
+        print("Height of " +Name[j]+ " is: " +str(Height[j]))
+        if(Height[i] > Height[j]):
+            print(Name[i]+ " wins!")
+            s=s+1
+        elif(Height[j] > Height[i]):
             print(Name[j]+ " wins!")
             c=c+1
         else:
