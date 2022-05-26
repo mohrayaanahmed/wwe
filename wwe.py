@@ -15,7 +15,7 @@ Weight = [228,172,190,165,258,106,196,204,240,190,260,122,130,206,180,196,180,18
 play=0
 c=0
 s=0
-"""
+
 while(play<10):
     x = rd.choice(Name)
     y = rd.choice(Name)
@@ -74,6 +74,4 @@ if(s>c):
 elif(c>s):
     print("Player 2 wins by " +str(c)+ " to " +str(s)+ " points.")
 else:
-    print("It's a Draw! Both players scored " +str(s)+ " points.")    
-"""
-print(len(Rank))
+    print("It's a Draw! Both players scored " +str(s)+ " points.")
